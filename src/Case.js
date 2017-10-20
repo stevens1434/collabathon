@@ -32,6 +32,9 @@ class Case extends Component {
 
     return (
       <div>
+        <div className="case-bubble">
+          <h3 className="case-bubble-text">Case</h3>
+        </div>
         <div className="container">
           <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
           <div className="component">

@@ -35,3 +35,14 @@ body {
 .highlight {
   color: green;
 }
+
+.case-bubble{
+  width: 7%;
+  height: 10%;
+  border: 1px black solid;
+  border-radius: 50%;
+}
+.case-bubble-text{
+  display: relative;
+  margin-top: ;
+}
