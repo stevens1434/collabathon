@@ -23,7 +23,7 @@ class Processor extends Component {
     var mappedprocessor = this.props.processorItems.map((processor, index) => {
       return([
           // <div className="core" key={core.call}>{core}</div>
-          <div key={index}>
+          <div className="products" key={index}>
             <p href="/perif" key={index} onClick={this.handleChange}><strong data-id={index}>{processor.name}</strong></p>
             <p>Price: {processor.price}</p> <p>Description: {processor.description}</p>
           </div>

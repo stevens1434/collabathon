@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
   background: black;
@@ -29,7 +31,7 @@
   to { transform: rotate(360deg); }
 }
 .highlight {
-  color: green;
+  background: #4cbb17;
 }
 .bubble{
   width: 60px;
@@ -37,13 +39,15 @@
   border: 3px white solid;
   border-radius: 50%;
   display: inline-block;
-  margin: 10px;
+  margin: 30px;
   position: relative;
   text-align: center;
+  left: 20px;
+  top: 5px;
 }
 .bubble-container{
-  width: 100%;
-  height: 25%;
+  width: 90%;
+  height: 150px;
   display: inline-block;
   border-bottom: 1px #4cbb17 solid;
 }
@@ -52,17 +56,16 @@
   text-align: center;
   position: relative;
   font-size:20px;
-  right: 66px;
-  top: 10px;
-
+  right: 0px;
+  top: 60px;
 }
 .bubble-text-checkout{
   display: inline-block;
   text-align: center;
   position: relative;
   font-size:20px;
-  right: 85px;
-  top: 10px;
+  right: 15px;
+  top: 60px;
 }
 .page-header-case{
   padding-top: 80px;
@@ -83,10 +86,19 @@
   height: 50%;
   display: inline-block;
 }
+img{
+  width: 60%;
+  height: 60%;
+}
+
 .page-header{
   border-bottom: 1px #4cbb17 solid;
+  width: 50%;
+  margin: 0 auto;
+  height: 40px;
 }
 .core-items{
+  padding-top: 60px;
   width: 50%;
   height:50%;
   float: right;
@@ -95,13 +107,30 @@
   display: inline-block;
   width: 40%;
   height: 50%;
+  vertical-align: top;
 }
 .items{
   display:inline-block;
   width: 60%;
   height: 50%;
-  position: relative;
-  top: -100px;
+}
+
+.main-title{
+  border-bottom: 1px #4cbb17 solid;
+  width: 75%;
+  margin: 0 auto;
+  vertical-align: top;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #e8d722;
+}
+.main-text{
+  text-align: left;
+  margin: 0 auto;
+  vertical-align: top;
+  margin-right: 10px;
 }
 .name {
   display: inline-block;
@@ -120,4 +149,21 @@ span.price {
 }
 span {
   margin-right: 300px;
+}
+.textbox {
+	width: 221px;
+	color : #747862;
+	height:20px;
+	border:1px;
+	padding:4px 8px;
+	margin-bottom:0px;
+}
+strong {
+  font-size: 25px;
+  font-weight: none;
+  letter-spacing: 2px;
+}
+.products {
+  text-align: left;
+  margin-left: 80px;
 }

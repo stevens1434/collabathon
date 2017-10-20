@@ -23,7 +23,7 @@ class Perif extends Component {
     var mappedPerif = this.props.perifItems.map((perif, index) => {
       return([
           // <div className="core" key={core.call}>{core}</div>
-          <div key={index}>
+          <div className="products" key={index}>
             <p href="/perif" key={index} onClick={this.handleChange}><strong data-id={index}>{perif.name}</strong></p>
             <p>Price: {perif.price}</p> <p>Description: {perif.description}</p>
           </div>
@@ -34,9 +34,10 @@ class Perif extends Component {
       <div>
         <div className="col-lg-12 text-center">
           <div className="container">
+
             <div className="info">
               <div className="img-div">
-                <img alt="asdfa" src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
+                <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
               </div>
               <div className="page-header">
                 <h1>Tower</h1>

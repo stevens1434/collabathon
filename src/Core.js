@@ -24,7 +24,7 @@ class Core extends Component {
     var mappedCore = this.props.coreItems.map((core, index) => {
       return([
           // <div className="core" key={core.call}>{core}</div>
-        <div key={index}>
+        <div className="products" key={index}>
           <p href="/perif" key={index} onClick={this.handleChange}><strong data-id={index}>{core.name}</strong></p>
           <p>Price: {core.price}</p> <p>Description: {core.description}</p>
         </div>
@@ -35,22 +35,22 @@ class Core extends Component {
       <div>
         <div className="container">
           <div className="img-div">
-              <img alt="asdfa" src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
+              <img src="/tower-diagram/MotherboardHighlight.png" />
           </div>
           <div className="core-items">
             <div className="page-header">
               <h1>Tower</h1>
             </div>
-              <h3 className="highlight">Motherboard</h3>
-              <h3>CPU</h3>
+              <h3>Motherboard</h3>
               <h3>Processor</h3>
               <h3>RAM</h3>
               </div>
-            <div className="main-desc">
-              <h3>MotherBoard</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              <div className="main-desc">
+              <h3 className="main-title">MotherBoard</h3>
+              <p className="main-text">The motherboard houses the various components of your gaming PC. Like a flesh-and-blood mother, it takes the disparate pieces, sits them down in their proper places, and helps them behave well together.</p>
             </div>
             <div className="items">
+              <h3 className="main-title">Products</h3>
             <ul>
               {mappedCore}
             </ul>
