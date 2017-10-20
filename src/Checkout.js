@@ -13,7 +13,6 @@ class Checkout extends Component {
   handleChange(e) {
     console.log("handleChange() in Core.js: ", e);
     //setstate of selected item, possibly at item like data-id to grab array[i] info
-    //call function in app.js
   }
 
   render() {
