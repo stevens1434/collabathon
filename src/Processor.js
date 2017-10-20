@@ -33,7 +33,9 @@ class Processor extends Component {
     return (
       <div>
         <div className="container">
+        <div className="img-div">
           <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
+          </div>
           <div className="component">
             <h1>Tower</h1>
             <h3>Motherboard</h3>
