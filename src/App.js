@@ -45,37 +45,53 @@ class App extends Component {
   }
 
   handleCore(id) {
-    console.log("handleCore() in App.js: ", id);
-    var id = id;
+    let tempArr = [];
     var result = this.state.coreItems.filter(function( obj ) {
       return obj.id == id;
       });
-    console.log(result);
+    tempArr.push(result).toString();
+    // let string = function(tempArr) {
+    //   tempArr.toString();
+    // }
+    // string()
+    // let string = tempArr.toString();
+    // console.log("string: ", string);
+    this.setState({
+      checkoutItem: tempArr
+    });
+    console.log("checkoutItem: ", this.state.checkoutItem);
   }
 
   handleProcessor(id) {
-    console.log("handleCore() in App.js: ", id);
-    var id = id;
+    let tempArr = [];
     var result = this.state.processorItems.filter(function( obj ) {
       return obj.id == id;
       });
-    console.log(result);
+    tempArr.push(result).toString();
+      this.setState({
+      checkoutItem: tempArr
+    });
+    console.log("checkoutItem: ", this.state.checkoutItem);
   }
   handleCase(id) {
-    console.log("handleCore() in App.js: ", id);
-    var id = id;
+    let tempArr = [];
     var result = this.state.caseItems.filter(function( obj ) {
       return obj.id == id;
       });
-    console.log(result);
+    let push = tempArr.push(result);
+    this.setState({
+      checkoutItem: push
+    })
   }
   handlePerif(id) {
-    console.log("handleCore() in App.js: ", id);
-    var id = id;
+    let tempArr = [];
     var result = this.state.perifItems.filter(function( obj ) {
       return obj.id == id;
       });
-    console.log(result);
+    let push = tempArr.push(result);
+    this.setState({
+      checkoutItem: push
+    })
   }
 
   render() {
