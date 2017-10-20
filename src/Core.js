@@ -34,34 +34,8 @@ class Core extends Component {
     return (
       <div>
         <div className="container">
-        <div className="bubble-container">
-                 <a href="/core">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/core">
-                   <h3 className="bubble-text">Core</h3>
-                 </a>
-                 <a href="/case">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/case">
-                   <h3 className="bubble-text">Case</h3>
-                 </a>
-                 <a href="/perif">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/perif">
-                   <h3 className="bubble-text">Perif</h3>
-                 </a>
-                 <a href="/checkout">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/checkout">
-                   <h3 className="bubble-text-checkout">Checkout</h3>
-                 </a>
-             </div>
           <div className="img-div">
-              <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
+              <img alt="asdfa" src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
           </div>
           <div className="core-items">
             <div className="page-header">

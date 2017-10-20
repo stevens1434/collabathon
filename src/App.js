@@ -51,6 +51,7 @@ class App extends Component {
       });
     result.toString();
     tempObj.push(result).toString();
+    console.log(tempObj[0][0])
     this.setState(function (previousState, props) {
      return {
       score: previousState.checkoutItem.push(tempObj)
@@ -107,11 +108,14 @@ class App extends Component {
       <Router>
         <div className="App">
           <nav>
-          <Link to='/core'></Link>{' '}
-          <Link to='/processor'></Link>{' '}
-          <Link to='/case'></Link>{' '}
-          <Link to='/perif'></Link>{' '}
-          <Link to='/checkout'></Link>{' '}
+          <Link className='bubble' to='/core'></Link>
+          <h3 className="bubble-text">Core</h3>
+          <Link className='bubble' to='/case'></Link>
+          <h3 className="bubble-text">Case</h3>
+          <Link className='bubble' to='/perif'></Link>
+          <h3 className="bubble-text">Perif</h3>
+          <Link className='bubble' to='/checkout'></Link>
+          <h3 className="bubble-text">Checkout</h3>
           </nav>
           <Route path="/core" render={() => <Core coreItems={this.state.coreItems}
                   handleCore = {this.handleCore}

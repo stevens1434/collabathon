@@ -101,3 +101,21 @@
   width: 60%;
   height: 50%;
 }
+.name {
+  display: inline-block;
+
+}
+.price {
+  float: right;
+  margin-right: 800px;
+  margin-left: 100px;
+  display: inline-block;
+}
+span.price {
+  float: right;
+  margin-right: 300px;
+  display: inline-block;
+}
+span {
+  margin-right: 300px;
+}
