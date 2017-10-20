@@ -34,22 +34,54 @@ class Core extends Component {
     return (
       <div>
         <div className="container">
-          <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
-          <div className="component">
-            <h1>Tower</h1>
-            <h3 className="highlight">Motherboard</h3>
-            <h3>CPU</h3>
-            <h3>Processor</h3>
-            <h3>RAM</h3>
+        <div className="bubble-container">
+                 <a href="/core">
+                   <div className="bubble"></div>
+                 </a>
+                 <a href="/core">
+                   <h3 className="bubble-text">Core</h3>
+                 </a>
+                 <a href="/case">
+                   <div className="bubble"></div>
+                 </a>
+                 <a href="/case">
+                   <h3 className="bubble-text">Case</h3>
+                 </a>
+                 <a href="/perif">
+                   <div className="bubble"></div>
+                 </a>
+                 <a href="/perif">
+                   <h3 className="bubble-text">Perif</h3>
+                 </a>
+                 <a href="/checkout">
+                   <div className="bubble"></div>
+                 </a>
+                 <a href="/checkout">
+                   <h3 className="bubble-text-checkout">Checkout</h3>
+                 </a>
+             </div>
+          <div className="img-div">
+              <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
           </div>
-          <div className="mainDesc">
-            <h3>MotherBoard</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <div className="core-items">
+            <div className="page-header">
+              <h1>Tower</h1>
+            </div>
+              <h3 className="highlight">Motherboard</h3>
+              <h3>CPU</h3>
+              <h3>Processor</h3>
+              <h3>RAM</h3>
+              </div>
+            <div className="main-desc">
+              <h3>MotherBoard</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div className="items">
+            <ul>
+              {mappedCore}
+            </ul>
+            </div>
           </div>
-          <ul>
-            {mappedCore}
-          </ul>
-        </div>
       </div>
     )
   }

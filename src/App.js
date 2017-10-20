@@ -107,11 +107,11 @@ class App extends Component {
       <Router>
         <div className="App">
           <nav>
-          <Link to='/core'>Core</Link>{' '}
-          <Link to='/processor'>Processor</Link>{' '}
-          <Link to='/case'>Case</Link>{' '}
-          <Link to='/perif'>Perif</Link>{' '}
-          <Link to='/checkout'>Checkout</Link>{' '}
+          <Link to='/core'></Link>{' '}
+          <Link to='/processor'></Link>{' '}
+          <Link to='/case'></Link>{' '}
+          <Link to='/perif'></Link>{' '}
+          <Link to='/checkout'></Link>{' '}
           </nav>
           <Route path="/core" render={() => <Core coreItems={this.state.coreItems}
                   handleCore = {this.handleCore}
