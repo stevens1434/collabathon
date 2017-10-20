@@ -12,7 +12,36 @@ import {
 } from 'react-router-dom';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      coreItems: [
+        {name: 'manufacturer1', price: 30, description: 'high end'},
+        {name: 'manufacturer2', price: 20, description: 'mid range'},
+        {name: 'manufacturer3', price: 10, description: 'low end'}
+        ],
+      cpuItems: [
+        {name: 'manufacturer1', price: 30, description: 'high end'},
+        {name: 'manufacturer2', price: 20, description: 'mid range'},
+        {name: 'manufacturer3', price: 10, description: 'low end'}
+      ],
+      caseItems: [
+        {name: 'manufacturer1', price: 30, description: 'high end'},
+        {name: 'manufacturer2', price: 20, description: 'mid range'},
+        {name: 'manufacturer3', price: 10, description: 'low end'}
+      ],
+      monitorItems: [
+        {name: 'manufacturer1', price: 30, description: 'high end'},
+        {name: 'manufacturer2', price: 20, description: 'mid range'},
+        {name: 'manufacturer3', price: 10, description: 'low end'}
+      ],
+      price: []
+    }
+  }
+
   render() {
+
+    
     return(
     <Router>
       <div className="App">
