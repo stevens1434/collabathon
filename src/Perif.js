@@ -52,7 +52,6 @@ class Perif extends Component {
                   </ul>
               </div>
             </div>
-
           </div>
         </div>
       </div>
