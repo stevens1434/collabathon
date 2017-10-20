@@ -64,18 +64,32 @@
   right: 85px;
   top: 10px;
 }
+.page-header-case{
+  padding-top: 80px;
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  border-bottom: 1px #4cbb17 solid;
+}
+.img-div-case{
+  padding-top: 80px;
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+}
 .img-div{
-  padding-top: 20px;
+  padding-top: 80px;
   width: 50%;
   height: 50%;
   display: inline-block;
 }
 .page-header{
+  border-bottom: 1px #4cbb17 solid;
+}
+.core-items{
   width: 50%;
   height:50%;
   float: right;
-  border-bottom: 1px #4cbb17 solid;
-
 }
 .main-desc{
   display: inline-block;
