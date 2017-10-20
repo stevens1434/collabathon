@@ -34,7 +34,7 @@ class Core extends Component {
     return (
       <div>
         <div className="container">
-          <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
+          <img alt="imdfsage" src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
           <div className="component">
             <h1>Tower</h1>
             <h3 className="highlight">Motherboard</h3>

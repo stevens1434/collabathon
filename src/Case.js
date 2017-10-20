@@ -36,7 +36,7 @@ class Case extends Component {
           <h3 className="case-bubble-text">Case</h3>
         </div>
         <div className="container">
-          <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
+          <img alt="imdafage" src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
           <div className="component">
             <h1>Tower</h1>
           </div>

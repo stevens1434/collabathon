@@ -45,19 +45,16 @@ class App extends Component {
   }
 
   handleCore(id) {
-    let tempArr = [];
+    let tempObj = [];
     var result = this.state.coreItems.filter(function( obj ) {
       return obj.id == id;
       });
-    tempArr.push(result).toString();
-    // let string = function(tempArr) {
-    //   tempArr.toString();
-    // }
-    // string()
-    // let string = tempArr.toString();
-    // console.log("string: ", string);
-    this.setState({
-      checkoutItem: tempArr
+    result.toString();
+    tempObj.push(result).toString();
+    this.setState(function (previousState, props) {
+     return {
+      score: previousState.checkoutItem.push(tempObj)
+     }
     });
     console.log("checkoutItem: ", this.state.checkoutItem);
   }
@@ -68,8 +65,10 @@ class App extends Component {
       return obj.id == id;
       });
     tempArr.push(result).toString();
-      this.setState({
-      checkoutItem: tempArr
+    this.setState(function (previousState, props) {
+     return {
+      score: previousState.checkoutItem.push(tempArr)
+     }
     });
     console.log("checkoutItem: ", this.state.checkoutItem);
   }
@@ -78,20 +77,26 @@ class App extends Component {
     var result = this.state.caseItems.filter(function( obj ) {
       return obj.id == id;
       });
-    let push = tempArr.push(result);
-    this.setState({
-      checkoutItem: push
-    })
+    tempArr.push(result).toString();
+    this.setState(function (previousState, props) {
+     return {
+      score: previousState.checkoutItem.push(tempArr)
+     }
+    });
+    console.log("checkoutItem: ", this.state.checkoutItem);
   }
   handlePerif(id) {
     let tempArr = [];
     var result = this.state.perifItems.filter(function( obj ) {
       return obj.id == id;
       });
-    let push = tempArr.push(result);
-    this.setState({
-      checkoutItem: push
-    })
+    tempArr.push(result).toString();
+    this.setState(function (previousState, props) {
+     return {
+      score: previousState.checkoutItem.push(tempArr)
+     }
+    });
+    console.log("checkoutItem: ", this.state.checkoutItem);
   }
 
   render() {
@@ -120,7 +125,7 @@ class App extends Component {
           <Route path="/perif" render={() => <Perif perifItems={this.state.perifItems}
                   handlePerif = {this.handlePerif}
                   />} />
-          <Route path="/checkout" render={() => <Checkout checkoutItems={this.state.checkoutItems} />} />
+          <Route path="/checkout" render={() => <Checkout checkoutItem={this.state.checkoutItem} />} />
         </div>
         </Router>
       </div>
