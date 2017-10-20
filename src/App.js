@@ -16,49 +16,98 @@ class App extends Component {
     super(props)
     this.state = {
       coreItems: [
-        {name: 'manufacturer1', price: 30, description: 'high end'},
-        {name: 'manufacturer2', price: 20, description: 'mid range'},
-        {name: 'manufacturer3', price: 10, description: 'low end'}
+        {name: 'manufacturer1', price: 30, description: 'high end', id: 0},
+        {name: 'manufacturer2', price: 20, description: 'mid range', id: 1},
+        {name: 'manufacturer3', price: 10, description: 'low end', id: 2}
         ],
-      cpuItems: [
-        {name: 'manufacturer1', price: 30, description: 'high end'},
-        {name: 'manufacturer2', price: 20, description: 'mid range'},
-        {name: 'manufacturer3', price: 10, description: 'low end'}
+      processorItems: [
+        {name: 'manufacturer1', price: 30, description: 'high end', id: 0},
+        {name: 'manufacturer2', price: 20, description: 'mid range', id: 1},
+        {name: 'manufacturer3', price: 10, description: 'low end', id: 2}
       ],
       caseItems: [
-        {name: 'manufacturer1', price: 30, description: 'high end'},
-        {name: 'manufacturer2', price: 20, description: 'mid range'},
-        {name: 'manufacturer3', price: 10, description: 'low end'}
+        {name: 'manufacturer1', price: 30, description: 'high end', id: 0},
+        {name: 'manufacturer2', price: 20, description: 'mid range', id: 1},
+        {name: 'manufacturer3', price: 10, description: 'low end', id: 2}
       ],
-      monitorItems: [
-        {name: 'manufacturer1', price: 30, description: 'high end'},
-        {name: 'manufacturer2', price: 20, description: 'mid range'},
-        {name: 'manufacturer3', price: 10, description: 'low end'}
+      perifItems: [
+        {name: 'manufacturer1', price: 30, description: 'high end', id: 0},
+        {name: 'manufacturer2', price: 20, description: 'mid range', id: 1},
+        {name: 'manufacturer3', price: 10, description: 'low end', id: 2}
       ],
-      price: []
+      price: [],
+      checkoutItem: []
     }
+    this.handleCore = this.handleCore.bind(this);
+    this.handleProcessor = this.handleProcessor.bind(this);
+    this.handleCase = this.handleCase.bind(this);
+    this.handlePerif = this.handlePerif.bind(this);
+  }
+
+  handleCore(id) {
+    console.log("handleCore() in App.js: ", id);
+    var id = id;
+    var result = this.state.coreItems.filter(function( obj ) {
+      return obj.id == id;
+      });
+    console.log(result);
+  }
+
+  handleProcessor(id) {
+    console.log("handleCore() in App.js: ", id);
+    var id = id;
+    var result = this.state.processorItems.filter(function( obj ) {
+      return obj.id == id;
+      });
+    console.log(result);
+  }
+  handleCase(id) {
+    console.log("handleCore() in App.js: ", id);
+    var id = id;
+    var result = this.state.caseItems.filter(function( obj ) {
+      return obj.id == id;
+      });
+    console.log(result);
+  }
+  handlePerif(id) {
+    console.log("handleCore() in App.js: ", id);
+    var id = id;
+    var result = this.state.perifItems.filter(function( obj ) {
+      return obj.id == id;
+      });
+    console.log(result);
   }
 
   render() {
 
-    
+
     return(
-    <Router>
-      <div className="App">
-        <nav>
-        <Link to='/core'>Core</Link>{' '}
-        <Link to='/perif'>Perif</Link>{' '}
-        <Link to='/processor'>Processor</Link>{' '}
-        <Link to='/case'>Case</Link>{' '}
-        <Link to='/checkout'>Checkout</Link>{' '}
-        </nav>
-        <Route path="/core" component={Core} />
-        <Route path="/perif" component={Perif} />
-        <Route path="/processor" component={Processor} />
-        <Route path="/case" component={Case} />
-        <Route path="/checkout" component={Checkout} />
+    <div>
+      <Router>
+        <div className="App">
+          <nav>
+          <Link to='/core'>Core</Link>{' '}
+          <Link to='/processor'>Processor</Link>{' '}
+          <Link to='/case'>Case</Link>{' '}
+          <Link to='/perif'>Perif</Link>{' '}
+          <Link to='/checkout'>Checkout</Link>{' '}
+          </nav>
+          <Route path="/core" render={() => <Core coreItems={this.state.coreItems}
+                  handleCore = {this.handleCore}
+                  />} />
+          <Route path="/processor" render={() => <Processor processorItems={this.state.processorItems}
+                  handleProcessor = {this.handleProcessor}
+                  />} />
+          <Route path="/case" render={() => <Case caseItems={this.state.caseItems}
+                  handleCase = {this.handleCase}
+                  />} />
+          <Route path="/perif" render={() => <Perif perifItems={this.state.perifItems}
+                  handlePerif = {this.handlePerif}
+                  />} />
+          <Route path="/checkout" render={() => <Checkout checkoutItems={this.state.checkoutItems} />} />
+        </div>
+        </Router>
       </div>
-      </Router>
     );
   }
 }
