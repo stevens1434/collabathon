@@ -16,11 +16,6 @@ class Checkout extends Component {
   }
 
   render() {
-    // if (this.props.checkoutItems === undefined) {
-    //   return([
-    //   <h1>You have not placed any items in your cart</h1>
-    //   ])
-    // } else {
 
     const flat = this.props.checkoutItem.reduce((total, amount) => {
       return total.concat(amount);
@@ -32,54 +27,70 @@ class Checkout extends Component {
     console.log(flatter);
     var mappedCheckout = flatter.map((checkout, index) => {
       return([
-          // <div className="core" key={core.call}>{core}</div>
         <p href="/perif" key={index} data-key={index} onClick={this.handleChange}>
-              <p>{checkout.name}</p>
-              {checkout.price}
-              {checkout.description}</p>
+              <p className="name">{checkout.name}</p>
+              <p className="price">{checkout.price}</p>
+              </p>
       ])
     })
     console.log(mappedCheckout)
-  // }
 
     return (
       <div>
-      <div className="bubble-container">
-                 <a href="/core">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/core">
-                   <h3 className="bubble-text">Core</h3>
-                 </a>
-                 <a href="/case">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/case">
-                   <h3 className="bubble-text">Case</h3>
-                 </a>
-                 <a href="/perif">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/perif">
-                   <h3 className="bubble-text">Perif</h3>
-                 </a>
-                 <a href="/checkout">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/checkout">
-                   <h3 className="bubble-text-checkout">Checkout</h3>
-                 </a>
-             </div>
         <div className="container">
+          <h1>Checkout</h1>
           <form>
-          <input className="checkout-input" type="text"></input>
-          <input className="checkout-input" type="text"></input>
-          <input className="checkout-input" type="text"></input>
-          <input className="checkout-input" type="text"></input>
-          <a className="checkout-button" href="/checkout">Checkout</a>
+            <h3>Shipping Address</h3>
+              <div>
+                First Name: <input className="textbox" type="text"/>
+                Last Name: <input className="textbox" type="text"/>
+              </div>
+              <div>
+                Address: <input className="textbox" type="text"/>
+                Address 2: <input className="textbox" type="text"/>
+              </div>
+              City: <input className="textbox" type="text"/>
+              State: <input className="textbox" type="text"/>
+              Zip Code: <input className="textbox" type="text"/>
+          </form>
+          <form>
+            <h3>Payment Information</h3>
+              <div>
+                Credit Card:  <input type="radio" input="MasterCard"/>
+                              <input type="radio" input="Visa"/>
+                              <input type="radio" input="American Express"/>
+              </div>
+              <div>
+                Card Number: <input className="textbox" type="text"/>
+              </div>
+              <div>
+              Expiration Date: <input type="date"/>
+              </div>
+              Cardholder Name: <input className="textbox" type="text"/>
+              <div>
+              CSV: <input className="textbox" type="text"/>
+              </div>
+          </form>
+          <form>
+            <h3>Shipping</h3>
+              <div>
+              <input type="radio"/> Standard: 5-7 Days
+              </div>
+              <div>
+              <input type="radio"/> Standard: 5-7 Days
+              </div>
+              <div>
+              <input type="radio"/> Standard: 5-7 Days
+              </div>
           </form>
           <ul className="checkout-items">
+            <h3>Review</h3>
+            <span className="name">Product</span>
+            <span className="Price">Price</span>
+            <span>Total</span>
+            <hr/>
             {mappedCheckout}
+            <button type="submit">Submit Order</button>
           </ul>
         </div>
       </div>

@@ -34,47 +34,20 @@ class Core extends Component {
     return (
       <div>
         <div className="container">
-        <div className="bubble-container">
-                 <a href="/core">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/core">
-                   <h3 className="bubble-text">Core</h3>
-                 </a>
-                 <a href="/case">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/case">
-                   <h3 className="bubble-text">Case</h3>
-                 </a>
-                 <a href="/perif">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/perif">
-                   <h3 className="bubble-text">Perif</h3>
-                 </a>
-                 <a href="/checkout">
-                   <div className="bubble"></div>
-                 </a>
-                 <a href="/checkout">
-                   <h3 className="bubble-text-checkout">Checkout</h3>
-                 </a>
-             </div>
           <div className="img-div">
-              <img src="http://www.xoticpc.com/media/wysiwyg/landingpages/store_fronts/xpc-desktops/gx12-destroyer-a.png" />
+              <img src="/tower-diagram/MotherboardHighlight.png" />
           </div>
           <div className="core-items">
             <div className="page-header">
               <h1>Tower</h1>
             </div>
-              <h3 className="highlight">Motherboard</h3>
-              <h3>CPU</h3>
+              <h3>Motherboard</h3>
               <h3>Processor</h3>
               <h3>RAM</h3>
               </div>
-            <div className="main-desc">
-              <h3>MotherBoard</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              <div className="main-desc">
+              <h3 className="main-title">MotherBoard</h3>
+              <p className="main-text">The motherboard houses the various components of your gaming PC. Like a flesh-and-blood mother, it takes the disparate pieces, sits them down in their proper places, and helps them behave well together.</p>
             </div>
             <div className="items">
             <ul>

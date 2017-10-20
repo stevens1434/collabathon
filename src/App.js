@@ -106,12 +106,11 @@ class App extends Component {
     <div>
       <Router>
         <div className="App">
-          <nav>
-          <Link to='/core'></Link>{' '}
-          <Link to='/processor'></Link>{' '}
-          <Link to='/case'></Link>{' '}
-          <Link to='/perif'></Link>{' '}
-          <Link to='/checkout'></Link>{' '}
+          <nav className="bubble-container">
+          <Link className='bubble highlight' to='/core'><h3 className="bubble-text">Core</h3></Link>
+          <Link className='bubble' to='/case'><h3 className="bubble-text">Case</h3></Link>
+          <Link className='bubble' to='/perif'><h3 className="bubble-text">Perif</h3></Link>
+          <Link className='bubble' to='/checkout'><h3 className="bubble-text-checkout">Checkout</h3></Link>
           </nav>
           <Route path="/core" render={() => <Core coreItems={this.state.coreItems}
                   handleCore = {this.handleCore}
